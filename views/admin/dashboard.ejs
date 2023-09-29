@@ -1,0 +1,33 @@
+<%- include('../partials/header.ejs')%>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Admin Dashboard</h1>
+<div class="container" >
+<table class="table table-bordered text-center" > 
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone:</th>
+        <th>action</th>
+    </tr>
+    <% d.forEach((c)=>{ %>
+        <tr>
+            <td> <%= c._id %> </td>
+            <td><%= c.username %></td>
+            <td><%= c.email %></td>
+            <td><%= c.mobile %></td>
+            <td><a href="/admincourseview/<%=c._id %>" class="btn btn-success">View</a></td>
+            <td><a href="/admincourseedit/<%=c._id %>" class="btn btn-primary">Edit</a></td>
+            <td><a href="/admincoursedelete/<%=c._id %>" class="btn btn-danger">Delete</a></td>
+            <!-- <td> <a href="/dashboard" class="btn btn-danger">Back To Dashboard</a></td> -->
+        </tr>
+        <!-- course -->
+  <%  }) %>
+    
+</table>
+</div>
+<%- include('../partials/footer.ejs')%>

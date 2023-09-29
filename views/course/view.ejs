@@ -1,0 +1,26 @@
+<%- include('../partials/header.ejs')%>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1 class="text-center" >Course View</h1>
+<div class="container" >
+<table class="table table-bordered text-center" > 
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone:</th>
+        <th >ACTION</th>
+    </tr>
+        <tr>
+            <td> <%= d._id %> </td>
+            <td><%= d.username %></td>
+            <td><%= d.email %></td>
+            <td><%= d.mobile %></td>
+            <td><a href="/courseedit/<%=d._id %>" class="btn btn-primary">Edit</a> <a href="/dashboard" class="btn btn-danger">Back To Dashboard</a></td>
+        </tr>
+</table>
+</div>
+<%- include('../partials/footer.ejs')%>

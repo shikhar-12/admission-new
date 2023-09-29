@@ -1,0 +1,34 @@
+.logo{
+	margin-left:10.7rem;	
+}
+.navtext{
+	color:white;
+}
+.nav-link:hover{
+	background-color:#00BCD4;
+}
+.c1:hover
+{
+	background:#FFB300;
+}
+
+.c2:hover
+{
+	background:#00897B;
+}
+.c2:hover{
+	background:#00897B;
+}
+.c3:hover{
+	background:#D81B60;
+}
+.pimage
+{
+	margin-right: 70px;
+	height:80px; 
+	width:80px
+}
+.pbody
+{
+	background-color: #212529;
+}

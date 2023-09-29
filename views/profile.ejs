@@ -1,0 +1,53 @@
+<%- include('./partials/header.ejs')%>
+<br><br>
+<body class="pbody" >
+    <div class="row text-white">
+        <div class="col-6" >
+            <h1 class="text-center" >Change Password</h1>
+            <br><br>
+            <form action="/updatepassword" method="post">
+                <div class="mt-2 mx-4">
+                    <label class="form-label justify-content-center" for="oldpass">Old Password</label>
+                    <input  type="password" name="old_password" id = "oldpass" class ="form-control bg-dark text-danger"/>
+                    </div>
+                    <div class="mt-2 mx-4">
+                        <label class="form-label" for="npass">New Password</label>
+                        <input  type="password" name="new_password" id = "npass" class ="form-control bg-dark text-danger" />
+                        </div>
+                        <div class="mt-2 mx-4">
+                            <label class="form-label" for="cpass">Confirm Password</label>
+                            <input  type="password" name="cpassword" id = "cpass" class ="form-control bg-dark text-danger" />
+                            </div>
+                            <br><br><br><br>
+                            <div class="text-center pt-2">
+                                <button type="submit" class="btn btn-primary" value="upload" >SUBMIT</button>
+                            </div>        
+            </form>
+        </div>
+        <div class="col-6">
+            <h1 class="text-center" >Update Profile</h1>
+            <br><br>
+            <form action="/updateprofile" method="post" enctype="multipart/form-data">
+                <div class="mt-2 mx-4">
+                    <label class="form-label" for="name">Name</label>
+                    <input  type="textbox" name="cname" value = "<%= n%>" id = "name" class ="form-control bg-dark text-danger" />
+                    </div>
+                    <div class="mt-2 mx-4 ">
+                        <label class="form-label" for="emailbox">Email</label>
+                        <input value = "<%= eml%>"  type="email" name="email" id = "emailbox" class ="form-control bg-dark text-danger"/>
+                        </div>
+                    <div class="mt-2 mx-4">
+                        <label class="form-label" for="profilepicture">Profile Picture</label>
+                        <input id="profilepicture" name="cimage" type="file" class ="form-control bg-dark text-danger" placeholder="No File Chosen"/>
+                        </div>
+                            <img src="<%= img.url %>" class="img-fluid pimage rounded p-2"/>
+                        <br><br>
+                        <div class="text-center pt-2">
+                            <button type="submit" class="btn btn-primary" value="upload" >Update</button>
+                        </div>    
+            </form>
+        </div>
+    </div>
+    
+</body>
+<%- include('./partials/footer.ejs')%>
